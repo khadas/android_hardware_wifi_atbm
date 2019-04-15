@@ -297,6 +297,8 @@ static int atbm_start_load_firmware(struct atbm_common *priv)
 #endif//
 	const struct firmware *firmware = NULL;
 	struct firmware_altobeam fw_altobeam;
+	
+	memset(&fw_altobeam,0,sizeof(struct firmware_altobeam));
 loadfw:
 	//u32 testreg_uart;
 #ifdef START_DCXO_CONFIG
